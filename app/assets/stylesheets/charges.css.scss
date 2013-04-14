@@ -1,3 +1,27 @@
 // Place all the styles related to the charges controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  color: #AAA;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+form button {
+  margin-top: 50px;
+}
+
+a {
+  color: #AAA;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2288bb;
+  text-decoration: underline;
+}
