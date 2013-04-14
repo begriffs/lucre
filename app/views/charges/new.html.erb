@@ -1,12 +1,17 @@
-<%= form_tag charges_path do %>
-  <article>
-  <label class="amount">
-    <span>Amount: $5.00</span>
-  </label>
-  </article>
+<h1>Joe Nelson</h1>
+
+<nav><a href="http://begriffs.com">begriffs.com</a> &gt; Pay Me</nav>
+
+<%= form_tag charges_path, class: '.form-horizontal' do %>
+  <div>
+    <label>Your email: <input type="email" name="email" required></label>
+  </div>
+  <div>
+    <label>Amount: $<input type="number" name="amount" min="0" max="9999" step="0.01" size="4" required></label>
+  </div>
 
   <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-description="A month's subscription"
-    data-amount="500"></script>
+    data-description="Pay @begriffs"
+    data-amount="0"></script>
 <% end %>
