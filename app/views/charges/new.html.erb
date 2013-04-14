@@ -2,7 +2,7 @@
 
 <nav><a href="<%= ENV['PAYEE_SITE_URL'] %>"><%= ENV['PAYEE_SITE'] %></a> &gt; Pay Me</nav>
 
-<%= form_tag charges_path, class: '.form-horizontal' do %>
+<%= form_tag charges_path do %>
   <div>
     <label>Your email: <input type="email" name="email" required></label>
   </div>
@@ -17,20 +17,22 @@
 <script>
   $(function () {
     $('form').submit(function () {
-      var token = function(res){
-        var $input = $('<input type=hidden name=stripeToken />').val(res.id);
-        $('form').append($input).submit();
-      };
+      if($('input[name="stripeToken"]').length < 1) {
+        var token = function(res){
+          var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+          $('form').append($input).submit();
+        };
 
-      StripeCheckout.open({
-        key:         '<%= Rails.configuration.stripe[:publishable_key] %>',
-        amount:      Math.round(100 * $('input[name="amount"]').val()),
-        name:        'Pay @<%= ENV['PAYEE_TWITTER'] %>',
-        panelLabel:  'Pay',
-        token:       token
-      });
+        StripeCheckout.open({
+          key:         '<%= Rails.configuration.stripe[:publishable_key] %>',
+          amount:      Math.round(100 * $('input[name="amount"]').val()),
+          name:        'Pay @<%= ENV['PAYEE_TWITTER'] %>',
+          panelLabel:  'Pay',
+          token:       token
+        });
 
-      return false;
+        return false;
+      }
     });
   });
 </script>
