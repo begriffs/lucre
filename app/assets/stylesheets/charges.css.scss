@@ -16,6 +16,10 @@ form button {
   margin-top: 50px;
 }
 
+button[type="submit"] {
+  padding: 5px;
+}
+
 a {
   color: #AAA;
   text-decoration: none;
