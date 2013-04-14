@@ -1,6 +1,6 @@
-<h1>Joe Nelson</h1>
+<h1><%= ENV['PAYEE_NAME'] %></h1>
 
-<nav><a href="http://begriffs.com">begriffs.com</a> &gt; Pay Me</nav>
+<nav><a href="<%= ENV['PAYEE_SITE_URL'] %>"><%= ENV['PAYEE_SITE'] %></a> &gt; Pay Me</nav>
 
 <%= form_tag charges_path, class: '.form-horizontal' do %>
   <div>
@@ -12,6 +12,6 @@
 
   <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-description="Pay @begriffs"
+    data-description="Pay @<%= ENV['PAYEE_TWITTER'] %>"
     data-amount="0"></script>
 <% end %>
