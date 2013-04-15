@@ -9,6 +9,8 @@ class ChargesController < ApplicationController
       :card => params[:stripeToken],
       :description => params[:email]
     )
+    @amount = params[:amount]
+    @payment_id = charge.id
 
   rescue Stripe::CardError => e
     flash[:error] = e.message

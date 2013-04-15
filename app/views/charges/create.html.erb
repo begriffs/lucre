@@ -1,1 +1,15 @@
-<h2>Thanks, you paid <strong>$5.00</strong>!</h2>
+<h1>Thanks, I got your payment.</h1>
+<nav>
+  <a href="<%= ENV['PAYEE_SITE_URL'] %>"><%= ENV['PAYEE_SITE'] %></a> &gt;
+  <a href="/charges/new">Pay Me</a> &gt;
+  Thanks
+</nav>
+<p>
+  For your reference:
+  <div>
+    <strong>Amount</strong>: <%= number_to_currency @amount %>
+  </div>
+  <div>
+    <strong>Payment ID</strong>: <%= @payment_id %>
+  </div>
+</p>
