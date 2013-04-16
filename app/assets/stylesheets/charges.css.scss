@@ -22,10 +22,13 @@ button[type="submit"] {
 
 a {
   color: #AAA;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
   color: #2288bb;
-  text-decoration: underline;
+}
+
+h1.error {
+  color: #EE8888;
 }
