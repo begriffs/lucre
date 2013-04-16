@@ -1,0 +1,8 @@
+<h1 class="error">Oops, there was a problem.</h1>
+<nav>
+  <a href="<%= ENV['PAYEE_SITE_URL'] %>"><%= ENV['PAYEE_SITE'] %></a> &gt;
+  <a href="/">Pay Me</a> &gt;
+  Error
+</nav>
+<p><%= flash[:error] %></p>
+<p>Can you please <a href="/">Try again</a>?</p>
