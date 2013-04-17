@@ -7,7 +7,7 @@ class ChargesController < ApplicationController
 
   def create
     charge = Stripe::Charge.create(
-      :amount => (params[:amount].to_f * 100).to_i,
+      :amount => (params[:amount].to_f * 100).abs.to_i,
       :currency => "usd",
       :card => params[:stripeToken],
       :description => params[:email]
