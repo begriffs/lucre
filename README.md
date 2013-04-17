@@ -9,8 +9,8 @@ This thing doesn't ask the customer much, just for an email
 and the payment amount. All the credit card info stays on
 [Stripe](https://stripe.com) so you have nothing to worry about.
 
-Check out a [demo](http://pay.begriffs.com). If you like it, why not
-donate? ;)
+You can see it in action [here](http://pay.begriffs.com). If you like
+it, why not donate? ;)
 
 ## Installation
 
