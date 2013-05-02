@@ -4,10 +4,10 @@
 
 <%= form_tag thanks_path do %>
   <div>
-    <label>Your email: <input type="email" name="email" required></label>
+    <label>Your email: <input type="email" name="email" value="<%= params[:email] %>" required></label>
   </div>
   <div>
-    <label>Amount: $<input type="number" name="amount" min="5" max="9999" step="0.01" size="4" required></label>
+    <label>Amount: $<input type="number" name="amount" value="<%= params[:amount] %>" min="5" max="9999" step="0.01" size="4" required></label>
   </div>
 
   <button class="pay-with-card" type="submit">Pay with Card</button>
