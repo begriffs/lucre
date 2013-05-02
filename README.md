@@ -68,19 +68,23 @@ running `$ heroku config:add VARIABLE_NAME=value`.
 
 ## Requesting Payment?
 
-If you using lucre to collect an owed debt you can specify the email and/or amount you intend to collect.
+If you are using lucre to collect an owed debt you can create a
+customized link to your lucre installation with a specified email and/or
+amount you intend to collect.
 
 ```
-http://pay.begriffs.com/?email=generous-client@example.com
+http://your-lucre-site.com/?email=generous-client@example.com
 ```
 
-The above will fill-in the email address of the person from whom you are collecting monies.
+The above will fill-in the email address of the person from whom you are
+collecting monies.
 
 ```
-http://pay.begriffs.com/?email=client@example.com&amount=47.39
+http://your-lucre-site.com/?email=client@example.com&amount=47.39
 ```
 
-The above will fill-in your client's email address and amount to be collected, in this case $47.39.
+The above will fill-in your client's email address and amount to be
+collected, in this case $47.39.
 
 ## Contributing
 
