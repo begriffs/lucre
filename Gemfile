@@ -7,7 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 
-gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'stripe'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 # Gems used only for assets and not required
